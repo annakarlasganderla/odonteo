@@ -55,7 +55,7 @@ function Login() {
   }
 
   return (
-    <main>
+    <main data-testid='login-test-id'>
       { message.show &&
         <Message addClass={message.status}>
           {message.text}
@@ -69,6 +69,7 @@ function Login() {
             id='email'
             name='email'
             type='text'
+            data-testid='email-id'
             onChange={(e) => handleChange(e, setLoginInformation)}
           />
         </label>
@@ -79,6 +80,7 @@ function Login() {
             id='password'
             name='password'
             type='password'
+            data-testid='password-id'
             onChange={(e) => handleChange(e, setLoginInformation)}
           />
         </label>
